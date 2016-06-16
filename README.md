@@ -104,10 +104,13 @@ The subdirectories of this repository are:
      * `stimulusgen_<date>` scripts contain exactly what was run to
         generate the stimuli shown for a specific experiment.
         Although the random seed was unfortunately not always
-        captured, the files saved as `stimuli-<date>.mat` should
+        captured, the files saved as `stimuli-<date>.mat` /should/
         contain the actual original stimuli used, whereas
-        `stimuli-<date>_rerun` were regenerated at a later point
-        to test the script.
+        `stimuli-<date>_rerun.mat` were regenerated at a later point
+        to test the script. However, if in doubt, you can always
+	go fetch the .mat file from the "Stimulus" folder of the
+	fMRI_CBI folder, which is guaranteed to be the one that was
+	actually shown to the subject.
 	
      * The other functions in this directory are helper functions to
        generate certain classes of stimuli, bandpass filters, and so
