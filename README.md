@@ -1,4 +1,4 @@
-Data + stimulus repository for SOC project
+fMRI data + stimuli loading for SOC project
 ==========================================
 
 This respository contains the code used to generate the stimuli
@@ -65,7 +65,7 @@ The subdirectories of this repository are:
   * imagereshape
   
     * Stacks of images are represented in different ways across this
-      code and KNK's code. Stimuli consist of images (X*Y pixels) of
+      code and KNK's code. Stimuli consist of images (X * Y pixels) of
       different categories (C) where each category can have multiple
       examples (frames, F), and each individual image can be
       represented in a multi-band format with several bands (B).
@@ -79,17 +79,17 @@ The subdirectories of this repository are:
           dimension B for bands. This is the structure that most
           easily allows slicing and indexing, for visualizing images.
   
-        * flat: A matrix (X*Y) * (C*F) * B bands, where each image has
+        * flat: A matrix (X * Y) * (C * F) * B bands, where each image has
 	  been turned into a vector, and category boundaries have been
 	  removed, although band distinctions remain. The "model
 	  steps" mostly operate on flattened images for efficiency
 	  purposes
 										    
-	* pixel vector: A matrix (X*Y) * C * F, where each image has
+	* pixel vector: A matrix (X * Y) * C * F, where each image has
           been turned into a vector, but category boundaries
           remain. KNK's model-fitting code expects something like a
           pixel vector, but with the dimensions flipped to be C *
-          (X*Y) * F, so interfaces with KNK's code will often include
+          (X * Y) * F, so interfaces with KNK's code will often include
           a "permute" step
 
   * knkcode
